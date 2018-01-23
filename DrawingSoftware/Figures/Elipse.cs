@@ -7,37 +7,22 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Shapes
 {
-    public class Elipse : OvalShape
+    public abstract class Elipse : OvalShape,IDraw
     {
-        
+        //To draw an elipse we need a center point with X and Y and a radius point with X and Y
 
-        public Elipse(Point x, double radius) : base(x, radius)
+        public Elipse(Point x, double fociA, double fociB,double distance) : base(x,fociA,fociB,distance)
         {
-
+            
+        }
+        public Elipse(Point center, double radius) : base(center,radius)
+        {
 
         }
 
-
-        //private double _fociA, _fociB, _center;
-        //public Elipse(double fociA,double fociB,double center)
-        //{
-        //    this._fociA = fociA;
-        //    this._fociB = fociB;
-        //    this._center = center;
-        //}
-        //public void Draw()
-        //{
-        //    if (_fociA == _fociB)
-        //    {
-        //        double sum = (_fociA+_fociB )/ 2
-        //        Circle circle = new Circle(sum,_center);
-        //        circle.Draw();
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("An elipse has been drawn");
-        //    }
-        //}
-
+        public void Draw()
+        {
+            Console.WriteLine("An elipse has been drawn");
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware
 {
-    public abstract class Point
+    public class Point
     {
         //If we work with all of the coordinats, we shal use a Point wich countains a X and Y coordinats
 

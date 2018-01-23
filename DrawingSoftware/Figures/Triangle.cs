@@ -7,21 +7,12 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Shapes
 {
-    class Triangle : IDraw //,ISurfaceArea
+    class Triangle : AngularShape, IDraw
     {
-        private double _a, _b, _c,_height;
-
-        public Triangle(double a,double b,double c, double d,double height)
+        public Triangle(Point x, Point y, double height, double width) : base(x, y, height, width)
         {
-            this._a = a;
-            this._b = b;
-            this._c = c;
-            this._height = height;
+
         }
-        //public void CalculateSurfacAarea()
-        //{
-        //    Console.WriteLine("The surface area of the triangle is:" + (A*h)/2);
-        //}
 
         public void Draw()
         {

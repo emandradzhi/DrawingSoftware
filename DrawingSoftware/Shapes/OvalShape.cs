@@ -11,6 +11,9 @@ namespace DrawingSoftware.Shapes
         protected Point _center;
         
         protected double _radius;
+        protected double _fociA;
+        protected double _fociB;
+        protected double _distance;
 
         public OvalShape(Point center, double radius)
         {
@@ -18,5 +21,15 @@ namespace DrawingSoftware.Shapes
             
             this._radius = radius;
         }
+
+        public OvalShape(Point center,double fociA, double fociB,double distance)
+        {
+            this._center = center;
+            this._fociA = fociA;
+            this._fociB = fociB;
+            this._distance = distance;
+        }
+
+       
     }
 }
