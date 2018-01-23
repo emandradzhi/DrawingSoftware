@@ -4,14 +4,16 @@ namespace DrawingSoftware.Shapes
 {
     public class Circle : OvalShape, IDraw
     {
-        public Circle(double x, double y, double radius) : base(x, y, radius)
+        public Circle(Point center, double radius) 
+                            : base(center, radius)
         {
-            
+         
         }
 
         public void Draw()
         {
-            System.Console.WriteLine("A Circle has been drawn");
+            
+            System.Console.WriteLine(((_center.x - _radius)+_center.y +"A Circle has been drawn"));
         }
     }
 }

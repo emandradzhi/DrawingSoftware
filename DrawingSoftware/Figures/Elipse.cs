@@ -9,6 +9,15 @@ namespace DrawingSoftware.Shapes
 {
     public class Elipse : OvalShape
     {
+        
+
+        public Elipse(Point x, double radius) : base(x, radius)
+        {
+
+
+        }
+
+
         //private double _fociA, _fociB, _center;
         //public Elipse(double fociA,double fociB,double center)
         //{
@@ -29,8 +38,6 @@ namespace DrawingSoftware.Shapes
         //        Console.WriteLine("An elipse has been drawn");
         //    }
         //}
-        public Elipse(double x, double y, double radius) : base(x, y, radius)
-        {
-        }
+
     }
 }

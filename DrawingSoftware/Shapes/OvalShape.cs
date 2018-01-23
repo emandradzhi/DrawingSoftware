@@ -8,14 +8,14 @@ namespace DrawingSoftware.Shapes
 {
     public abstract class OvalShape
     {
-        private double _x;
-        private double _y;
-        private double _radius;
+        protected Point _center;
+        
+        protected double _radius;
 
-        public OvalShape(double x, double y, double radius)
+        public OvalShape(Point center, double radius)
         {
-            this._x = x;
-            this._y = y;
+            this._center = center;
+            
             this._radius = radius;
         }
     }

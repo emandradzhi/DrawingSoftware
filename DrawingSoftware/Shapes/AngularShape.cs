@@ -8,14 +8,17 @@ namespace DrawingSoftware.Shapes
 {
     public abstract class AngularShape
     {
-        private double _x;
-        private double _y;
+        private Point _x;
+        private Point _y;
         private double _height;
         private double _width;
 
-        public AngularShape(double x,double y, double height,double width)
+        public AngularShape(Point x,Point y, double height,double width)
         {
-
+            this._x = x;
+            this._y = y;
+            this._height = height;
+            this._width = width;
         }
 
     }
