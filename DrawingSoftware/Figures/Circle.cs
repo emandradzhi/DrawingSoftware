@@ -2,7 +2,7 @@
 
 namespace DrawingSoftware.Shapes
 {
-    public class Circle : OvalShape, IDraw
+    public class Circle : Elipse
     {
         // To draw a circle we need a center point and raidus lentgth
         public Circle(Point center, double radius): base(center, radius)
@@ -10,9 +10,14 @@ namespace DrawingSoftware.Shapes
 
         }
 
-        public void Draw()
+        public override void CalculateSurfacAarea()
         {
-            System.Console.WriteLine("An circle has been drawn");
+            throw new System.NotImplementedException();
+        }
+
+        public override void Draw()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

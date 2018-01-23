@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrawingSoftware.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Shapes
 {
-    public abstract class OvalShape
+    public abstract class OvalShape : IFigure
     {
         protected Point _center;
         
@@ -30,6 +31,7 @@ namespace DrawingSoftware.Shapes
             this._distance = distance;
         }
 
-       
+        public abstract void CalculateSurfacAarea();
+        public abstract void Draw();
     }
 }

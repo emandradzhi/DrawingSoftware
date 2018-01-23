@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Shapes
 {
-    public abstract class Elipse : OvalShape,IDraw
+    public abstract class Elipse : OvalShape
     {
         //To draw an elipse we need a center point with X and Y and a radius point with X and Y
 
@@ -20,9 +20,14 @@ namespace DrawingSoftware.Shapes
 
         }
 
-        public void Draw()
+        public override void CalculateSurfacAarea()
         {
-            Console.WriteLine("An elipse has been drawn");
+            throw new NotImplementedException();
+        }
+
+        public override void Draw()
+        {
+            throw new NotImplementedException();
         }
     }
 }

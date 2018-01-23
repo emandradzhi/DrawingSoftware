@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Interfaces
 {
-    public interface ISurfaceArea
+    public interface IFigure
     {
+        void Draw();
         void CalculateSurfacAarea();
     }
 }

@@ -1,20 +1,25 @@
 ﻿using DrawingSoftware.Interfaces;
+using DrawingSoftware.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DrawingSoftware.Shapes
+namespace DrawingSoftware.Figures
 {
-    class Triangle : AngularShape, IDraw
+    public class Triangle : Polygon
     {
-        public Triangle(Point x, Point y, double height, double width) : base(x, y, height, width)
+        public Triangle(Point A, Point B, Point C) : base(A, B, C)
         {
 
         }
+        public override void CalculateSurfacAarea()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Draw()
+        public override void Draw()
         {
             Console.WriteLine("A triangle has been drawn");
         }

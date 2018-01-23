@@ -1,0 +1,7 @@
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\bin\Debug\DrawingSoftware.exe.config
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\bin\Debug\DrawingSoftware.exe
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\bin\Debug\DrawingSoftware.pdb
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\obj\Debug\DrawingSoftware.csprojResolveAssemblyReference.cache
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\obj\Debug\DrawingSoftware.csproj.CoreCompileInputs.cache
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\obj\Debug\DrawingSoftware.exe
+C:\Users\emin.mandradzhi\source\repos\DrawingSoftware\DrawingSoftware\obj\Debug\DrawingSoftware.pdb
