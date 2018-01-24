@@ -1,10 +1,4 @@
-﻿using DrawingSoftware.Interfaces;
-using DrawingSoftware.Shapes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace DrawingSoftware.Figures
 {
@@ -24,7 +18,6 @@ namespace DrawingSoftware.Figures
         {
             double side = Math.Pow((_A.X + _B.X), 2);
             return side;
-            
         }
 
         public override void Draw()

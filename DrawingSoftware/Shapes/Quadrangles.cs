@@ -1,10 +1,5 @@
 ﻿using DrawingSoftware.Interfaces;
-using DrawingSoftware.Shapes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DrawingSoftware.Figures
 {
@@ -14,7 +9,6 @@ namespace DrawingSoftware.Figures
         private Point _B;
         private Point _C;
         private Point _D;
-
         public Quadrangles(Point A, Point B, Point C, Point D)
         {
             this._A = A;
@@ -28,8 +22,24 @@ namespace DrawingSoftware.Figures
             this._B = B;
             this._C = C;
         }
+        public virtual void Draw()
+        {
+            Console.WriteLine("A quadrangles has been drawn");
+        }
+        public virtual double CalculateSurfacAarea()
+        {
+            var rand = new Random(1500).NextDouble();
 
-        public abstract void Draw();
-        public abstract double CalculateSurfacAarea();
+            return rand;
+        }
+        protected virtual Point findPoint(Point A, Point B, Point C)
+        {
+            Point _D = new Point();
+
+            _D.X = (A.X + B.X) - C.X;
+            _D.Y = (A.Y + B.Y) - C.Y;
+
+            return _D;
+        }
     }
 }

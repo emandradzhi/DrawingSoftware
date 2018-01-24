@@ -1,23 +1,27 @@
-﻿using DrawingSoftware.Interfaces;
+﻿using System;
 
 namespace DrawingSoftware.Shapes
 {
     public class Circle : Elipse
-    {
-        // To draw a circle we need a center point and raidus lentgth
+    { // To draw a circle we need a center point and raidus lentgth
+        private Point _center;
+        private double _radius;
+        
         public Circle(Point center, double radius): base(center, radius)
         {
-
+            this._center = center;
+            this._radius = radius;
         }
 
-        public override double CalculateSurfacAarea()
+        public new double CalculateSurfacAarea()
         {
-            throw new System.NotImplementedException();
+            double area = Math.PI * _radius;
+            return area;
         }
 
-        public override void Draw()
+        public new void Draw()
         {
-            System.Console.WriteLine("A circle has been drawn");
+            Console.WriteLine("A circle has been drawn");
         }
     }
 }

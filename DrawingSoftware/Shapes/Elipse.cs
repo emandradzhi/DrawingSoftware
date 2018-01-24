@@ -1,21 +1,17 @@
 ﻿using DrawingSoftware.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DrawingSoftware.Shapes
 {
     public abstract class Elipse : IFigure
     {
         //To draw an elipse we need a center point with X and Y and a radius point with X and Y
-        protected Point _center;
+        private Point _center;
 
-        protected double _radius;
-        protected double _fociA;
-        protected double _fociB;
-        protected double _distance;
+        private double _radius;
+        private double _fociA;
+        private double _fociB;
+        private double _distance;
 
         protected Elipse(Point center, double radius)
         {
@@ -30,7 +26,15 @@ namespace DrawingSoftware.Shapes
             this._fociB = fociB;
             this._distance = distance;
         }
-        public abstract double CalculateSurfacAarea();
-        public abstract void Draw();
+
+        public void Draw()
+        {
+            Console.WriteLine("An elipse has been drawn");
+        }
+
+        public double CalculateSurfacAarea()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

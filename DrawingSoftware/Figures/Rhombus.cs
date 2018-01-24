@@ -1,10 +1,5 @@
-﻿using DrawingSoftware.Interfaces;
-using DrawingSoftware.Shapes;
+﻿using DrawingSoftware.Shapes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DrawingSoftware.Figures
 {
@@ -19,15 +14,21 @@ namespace DrawingSoftware.Figures
             this._B = B;
             this._C = C;
         }
-
         public override double CalculateSurfacAarea()
         {
-            throw new NotImplementedException();
-        }
+           var _D =  findPoint(_A, _B, _C);
+           double d1 = Math.Sqrt(Math.Pow((_C.X - _A.X), 2) + Math.Pow((_C.Y - _A.Y), 2));
+           double d2 = Math.Sqrt(Math.Pow((_D.X - _B.X), 2) + Math.Pow((_D.Y - _B.Y), 2));
 
+           return (d1 * d2) / 2; 
+        }
         public override void Draw()
         {
             Console.WriteLine("A rhombus has been drawn");
+        }
+        protected override Point findPoint(Point A, Point B, Point C)
+        {
+            return findPoint(A, B, C);
         }
     }
 }

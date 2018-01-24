@@ -14,17 +14,17 @@ namespace DrawingSoftware.Shapes
             this._B = B;
             this._C = C;
         }
-
         public override double CalculateSurfacAarea()
         {
-            throw new NotImplementedException();
+            double a = (_B.X - _A.X);
+            double h = new Random(50).NextDouble();
+            double area = a * h;
+            return h;
         }
-
         public override void Draw()
         {
             Console.WriteLine("A parallelogram has been drawn");
         }
-
     }
 }
         

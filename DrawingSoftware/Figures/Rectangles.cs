@@ -1,10 +1,5 @@
-﻿using DrawingSoftware.Interfaces;
-using DrawingSoftware.Shapes;
+﻿using DrawingSoftware.Shapes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DrawingSoftware.Figures
 {
@@ -20,10 +15,9 @@ namespace DrawingSoftware.Figures
             this._C = C;
         }
         public override double CalculateSurfacAarea()
-        {
-            double side = Math.Pow((_A.X + _B.X), 2);
-
-            return side;
+        { 
+            double area = (_A.X + _B.X)*(_B.Y + _C.Y);
+            return area;
         }
 
         public override void Draw()
