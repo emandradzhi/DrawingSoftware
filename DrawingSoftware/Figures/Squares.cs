@@ -8,21 +8,28 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Figures
 {
-    public class Squares : Parallelogram
+    public class Squares : Rectangles
     {
-        public Squares(Point A, Point B, Point C, Point D) : base(A, B, C, D)
+        private Point _A;
+        private Point _B;
+        private Point _C;
+        public Squares(Point A, Point B, Point C) : base(A, B, C)
         {
-
+            this._A = A;
+            this._B = B;
+            this._C = C;
         }
 
-        public override void CalculateSurfacAarea()
+        public override double CalculateSurfacAarea()
         {
-            throw new NotImplementedException();
+            double side = Math.Pow((_A.X + _B.X), 2);
+            return side;
+            
         }
 
         public override void Draw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("A square has been drawn");
         }
     }
 }

@@ -10,14 +10,14 @@ namespace DrawingSoftware.Shapes
 
         }
 
-        public override void CalculateSurfacAarea()
+        public override double CalculateSurfacAarea()
         {
             throw new System.NotImplementedException();
         }
 
         public override void Draw()
         {
-            throw new System.NotImplementedException();
+            System.Console.WriteLine("A circle has been drawn");
         }
     }
 }

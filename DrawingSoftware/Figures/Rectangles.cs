@@ -10,17 +10,25 @@ namespace DrawingSoftware.Figures
 {
     public class Rectangles : Parallelogram
     {
-        public Rectangles(Point A, Point B, Point C, Point D) : base(A, B, C, D)
+        private Point _A;
+        private Point _B;
+        private Point _C;
+        public Rectangles(Point A, Point B, Point C) : base(A, B, C)
         {
+            this._A = A;
+            this._B = B;
+            this._C = C;
         }
-        public override void CalculateSurfacAarea()
+        public override double CalculateSurfacAarea()
         {
-            throw new NotImplementedException();
+            double side = Math.Pow((_A.X + _B.X), 2);
+
+            return side;
         }
 
         public override void Draw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("A rectangle has been drawn");
         }
     }
 }

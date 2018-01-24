@@ -9,6 +9,6 @@ namespace DrawingSoftware.Interfaces
     public interface IFigure
     {
         void Draw();
-        void CalculateSurfacAarea();
+        double CalculateSurfacAarea();
     }
 }

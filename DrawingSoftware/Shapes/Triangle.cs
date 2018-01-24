@@ -8,21 +8,20 @@ using System.Threading.Tasks;
 
 namespace DrawingSoftware.Figures
 {
-    public class Quadrangles : Polygon
+    public class Triangle : IFigure
     {
-        public Quadrangles(Point A, Point B, Point C, Point D) : base(A, B, C, D)
+        public Triangle(Point A, Point B, Point C)
         {
 
         }
-
-        public override void CalculateSurfacAarea()
+        public double CalculateSurfacAarea()
         {
             throw new NotImplementedException();
         }
 
-        public override void Draw()
+        public void Draw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("A triangle has been drawn");
         }
     }
 }

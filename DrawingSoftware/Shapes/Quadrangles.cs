@@ -1,30 +1,28 @@
 ﻿using DrawingSoftware.Interfaces;
+using DrawingSoftware.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DrawingSoftware.Shapes
+namespace DrawingSoftware.Figures
 {
-    public abstract class Polygon : IFigure
+    public abstract class Quadrangles : IFigure
     {
-        protected Point _A;
-        protected Point _B;
-        protected Point _C;
-        protected Point _D;
+        private Point _A;
+        private Point _B;
+        private Point _C;
+        private Point _D;
 
-        //protected double _height;
-        //protected double _width;
-
-        public Polygon(Point A, Point B, Point C, Point D)
+        public Quadrangles(Point A, Point B, Point C, Point D)
         {
             this._A = A;
             this._B = B;
             this._C = C;
             this._D = D;
         }
-        public Polygon(Point A, Point B, Point C)
+        public Quadrangles(Point A, Point B, Point C)
         {
             this._A = A;
             this._B = B;
@@ -32,6 +30,6 @@ namespace DrawingSoftware.Shapes
         }
 
         public abstract void Draw();
-        public abstract void CalculateSurfacAarea();
+        public abstract double CalculateSurfacAarea();
     }
 }

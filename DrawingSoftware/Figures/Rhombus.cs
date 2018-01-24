@@ -10,19 +10,24 @@ namespace DrawingSoftware.Figures
 {
     public class Rhombus : Parallelogram
     {
-        public Rhombus(Point A, Point B, Point C, Point D) : base(A, B, C, D)
+        private Point _A;
+        private Point _B;
+        private Point _C;
+        public Rhombus(Point A, Point B, Point C) : base(A, B, C)
         {
+            this._A = A;
+            this._B = B;
+            this._C = C;
         }
 
-
-        public override void CalculateSurfacAarea()
+        public override double CalculateSurfacAarea()
         {
             throw new NotImplementedException();
         }
 
         public override void Draw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("A rhombus has been drawn");
         }
     }
 }
