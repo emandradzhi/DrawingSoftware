@@ -3,19 +3,17 @@
 namespace DrawingSoftware.Shapes
 {
     public class Circle : Elipse
-    { // To draw a circle we need a center point and raidus lentgth
-        private Point _center;
-        private double _radius;
-        
-        public Circle(Point center, double radius): base(center, radius)
+    { 
+        private double radius;
+        public Circle(Point center, double distance) : base(center,distance)
         {
             this._center = center;
-            this._radius = radius;
+            this.radius = distance;
         }
 
         public new double CalculateSurfacAarea()
         {
-            double area = Math.PI * _radius;
+            double area = Math.PI * radius;
             return area;
         }
 

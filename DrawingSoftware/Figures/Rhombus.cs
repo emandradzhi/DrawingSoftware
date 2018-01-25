@@ -10,8 +10,8 @@ namespace DrawingSoftware.Figures
         }
         public override double CalculateSurfacAarea()
         {
-            double d1 = Math.Sqrt(Math.Pow((_C.X - _A.X), 2) + Math.Pow((_C.Y - _A.Y), 2));
-            double d2 = Math.Sqrt(Math.Pow((_D.X - _B.X), 2) + Math.Pow((_D.Y - _B.Y), 2));
+            double d1 = ParallelogramUtilities.FindLength(_A, _C);
+            double d2 = ParallelogramUtilities.FindLength(_D, _B);
 
             return (d1 * d2) / 2;
         }
