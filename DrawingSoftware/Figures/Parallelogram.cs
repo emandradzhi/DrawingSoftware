@@ -3,16 +3,11 @@ using System;
 
 namespace DrawingSoftware.Shapes
 {
-    public class Parallelogram : Quadrangles
+    public class Parallelogram : Quadrangle
     {
-        private Point _A;
-        private Point _B;
-        private Point _C;
-        public Parallelogram(Point A, Point B, Point C) : base(A, B, C)
+        public Parallelogram(Point A, Point B, Point C) :
+            base(A, B, C, Utilities.FindPoint(A, B, C))
         {
-            this._A = A;
-            this._B = B;
-            this._C = C;
         }
         public override double CalculateSurfacAarea()
         {
@@ -27,5 +22,5 @@ namespace DrawingSoftware.Shapes
         }
     }
 }
-        
+
 

@@ -2,16 +2,10 @@
 
 namespace DrawingSoftware.Figures
 {
-    public class Squares : Rectangles
+    public class Square : Rectangle
     {
-        private Point _A;
-        private Point _B;
-        private Point _C;
-        public Squares(Point A, Point B, Point C) : base(A, B, C)
+        public Square(Point A, Point B, Point C) : base(A, B, C)
         {
-            this._A = A;
-            this._B = B;
-            this._C = C;
         }
 
         public override double CalculateSurfacAarea()

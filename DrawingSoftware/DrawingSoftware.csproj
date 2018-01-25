@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Shapes\Quadrangles.cs" />
-    <Compile Include="Figures\Rectangles.cs" />
+    <Compile Include="Shapes\Quadrangle.cs" />
+    <Compile Include="Figures\Rectangle.cs" />
     <Compile Include="Figures\Rhombus.cs" />
-    <Compile Include="Figures\Squares.cs" />
+    <Compile Include="Figures\Square.cs" />
     <Compile Include="Shapes\Triangle.cs" />
     <Compile Include="Interfaces\IFigure.cs" />
     <Compile Include="Data\Point.cs" />
@@ -54,6 +54,7 @@
     <Compile Include="Figures\Circle.cs" />
     <Compile Include="Shapes\Elipse.cs" />
     <Compile Include="Figures\Parallelogram.cs" />
+    <Compile Include="Utilities\ParallelogramUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
