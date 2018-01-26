@@ -10,6 +10,7 @@ namespace DrawingSoftware.Figures
         }
         public override double CalculateSurfacAarea()
         {
+            //Calculate the diagonls
             double d1 = ParallelogramUtilities.FindLength(_A, _C);
             double d2 = ParallelogramUtilities.FindLength(_D, _B);
 

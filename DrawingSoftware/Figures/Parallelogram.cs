@@ -5,8 +5,8 @@ namespace DrawingSoftware.Shapes
 {
     public class Parallelogram : Quadrangle
     {
-        public Parallelogram(Point A, Point B, Point C) :
-            base(A, B, C, ParallelogramUtilities.FindPoint(A, B, C))
+        public Parallelogram(Point _A, Point _B, Point _C) :
+            base(_A, _B, _C, ParallelogramUtilities.FindPoint(_A, _B, _C))
         {
         }
         public override double CalculateSurfacAarea()
@@ -18,13 +18,9 @@ namespace DrawingSoftware.Shapes
         }
         public override void Draw()
         {
-            double d1;
-            double d2;
-            if ((_B.X - _A.X) == (_D.X - _C.X) && (_D.Y - _A.Y) == (_C.Y - _B.Y))
-            { 
             Console.WriteLine("A parallelogram has been drawn");
-            }
         }
+       
     }
 }
 
