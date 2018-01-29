@@ -20,7 +20,6 @@ namespace DrawingSoftware.Shapes
         {
             Console.WriteLine("A parallelogram has been drawn");
         }
-       
     }
 }
 

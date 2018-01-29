@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\AbstractFactory.cs" />
     <Compile Include="Shapes\Quadrangle.cs" />
     <Compile Include="Figures\Rectangle.cs" />
     <Compile Include="Figures\Rhombus.cs" />

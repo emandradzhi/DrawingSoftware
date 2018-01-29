@@ -1,4 +1,5 @@
-﻿using DrawingSoftware.Figures;
+﻿using DrawingSoftware.Factories;
+using DrawingSoftware.Figures;
 using DrawingSoftware.Shapes;
 
 namespace DrawingSoftware
@@ -10,9 +11,11 @@ namespace DrawingSoftware
             Point A = new Point(0, 0);
             Point B = new Point(0, 2);
             Point C = new Point(2, 2);
-            Parallelogram p = new Parallelogram(A, B, C);
-            p.Draw();
-            //System.Console.WriteLine(p.CalculateSurfacAarea());
+
+            AbstractFactory af = new AbstractFactory();
+            var shape = af.CreateShape(A,B,C);
+            shape.Draw();
+            
         }
     }
 }
