@@ -8,7 +8,9 @@ namespace DrawingSoftware
     {
         public static Point FindPoint(Point A, Point B, Point C)
         {
+            // Тemporarily X
             double _x1 = Math.Abs(B.X - C.X);
+            // X wich should be returned
             double _x;
             if (_x1 != 0)
             {
@@ -21,7 +23,7 @@ namespace DrawingSoftware
             return _D;
         }
 
-        //This method is finding the lenght between two points
+        // This method is finding the lenght between two points
         public static double FindLength(Point A, Point B)
         {
             double l = Math.Sqrt(Math.Pow(Math.Abs((A.X - B.X)), 2) + Math.Pow(Math.Abs((A.Y - B.Y)), 2));
