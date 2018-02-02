@@ -14,6 +14,7 @@ namespace DrawingSoftware.BinaryTree
                 base.Items.Add(default(Node<T>));
             }
         }
+        
         public Node<T> FindBySurficeArea(NodeList<T> surficeArea)
         {
             foreach (Node<T> node in Items)

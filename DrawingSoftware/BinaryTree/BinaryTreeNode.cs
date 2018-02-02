@@ -16,29 +16,28 @@ namespace DrawingSoftware.BinaryTree
             children[0] = left;
             children[1] = right;
 
-            base.SurfaceArea = children;
         }
 
         public BinaryTreeNode<T> Left
         {
             get
             {
-                if (base.SurfaceArea == null)
+                if (true)
                 {
                     return null;
                 }
                 else
                 {
-                    return (BinaryTreeNode<T>)base.SurfaceArea[0];
+                  
                 }
             }
             set
             {
-                if (base.SurfaceArea == null)
+                if (true //base.SurfaceArea == null)
                 {
-                    base.SurfaceArea = new NodeList<T>(2);
+                    //base.SurfaceArea = new NodeList<T>(2);
                 }
-                base.SurfaceArea[0] = value;
+              //  base.SurfaceArea[0] = value;
             }
         }
         public BinaryTreeNode<T> Right
