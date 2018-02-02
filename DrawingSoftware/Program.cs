@@ -1,4 +1,5 @@
-﻿using DrawingSoftware.Factories;
+﻿using DrawingSoftware.BinaryTree;
+using DrawingSoftware.Factories;
 using DrawingSoftware.Figures;
 using DrawingSoftware.Shapes;
 
@@ -16,6 +17,7 @@ namespace DrawingSoftware
             var shape = af.CreateShape(A,B,C);
             shape.Draw();
             
+            BinaryTree<double> btree = new BinaryTree<double>();
         }
     }
 }
