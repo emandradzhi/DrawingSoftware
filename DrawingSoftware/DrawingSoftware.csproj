@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryTree\BinaryTree.cs" />
-    <Compile Include="BinaryTree\BinaryTreeNode.cs" />
-    <Compile Include="BinaryTree\Node.cs" />
-    <Compile Include="BinaryTree\NodeList.cs" />
+    <Compile Include="BinaryTreeSearch\BinaryTree.cs" />
+    <Compile Include="BinaryTreeSearch\Node.cs" />
     <Compile Include="Factories\AbstractFactory.cs" />
     <Compile Include="Shapes\Quadrangle.cs" />
     <Compile Include="Figures\Rectangle.cs" />

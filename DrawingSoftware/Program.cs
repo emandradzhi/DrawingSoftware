@@ -1,7 +1,6 @@
-﻿using DrawingSoftware.BinaryTree;
+﻿
+using DrawingSoftware.BinaryTreeSearch;
 using DrawingSoftware.Factories;
-using DrawingSoftware.Figures;
-using DrawingSoftware.Shapes;
 
 namespace DrawingSoftware
 {
@@ -16,9 +15,10 @@ namespace DrawingSoftware
             AbstractFactory af = new AbstractFactory();
             var shape = af.CreateShape(A,B,C);
             shape.Draw();
-            
-            BinaryTree<double> btree = new BinaryTree<double>();
-            
+            Node root = new Node(0);
+            BinaryTree bts = new BinaryTree(root, 5);
+            bts.Insert(new Node(10), 6);
+            bts.Display();
         }
     }
 }
