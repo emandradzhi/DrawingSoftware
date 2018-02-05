@@ -4,12 +4,16 @@ namespace DrawingSoftware.BinaryTreeSearch
 {
     public class BinaryTree
     {
-        private Node root;
+        private Node _root;
         
         public BinaryTree(){
-            root = null;
+            _root = null;
         }
-       
+        // Този метод връша корена на дървото
+        public Node ReturnRoot()
+        {
+            return _root;
+        }
         // За създване на ноуд ни трябват данни, подаваме данни и ги запзваме на нов ноуд
         public void Insert(double data)
         {
@@ -17,15 +21,15 @@ namespace DrawingSoftware.BinaryTreeSearch
             Node newNode = new Node(data);
             newNode._data = data;
             // ако да новият ноуд става корен
-            if (root == null)
+            if (_root == null)
             {
-                root = newNode;
+                _root = newNode;
             }
             // ако не добавяме ноуда
             else
             {
                 // Взимаме стойността на корена и я слагаме на променлива
-                Node current = root;
+                Node current = _root;
 
                 // Създаваме родител
                 Node parent;
@@ -60,11 +64,13 @@ namespace DrawingSoftware.BinaryTreeSearch
             }
         }
         
-        public void Display(Node node)
+        public void Inorder(Node root)
         {
-            if (node != null)
+            if (root != null)
             {
-               Console.WriteLine(node._data.ToString() + node._leftLeaf.ToString() + node._rigthLeaf.ToString());
+                Inorder(root._leftLeaf);
+                Console.WriteLine(root._data + "  " );
+                Inorder(root._rigthLeaf);
             }
             else
             {
