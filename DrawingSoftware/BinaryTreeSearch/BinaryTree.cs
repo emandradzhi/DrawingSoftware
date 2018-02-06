@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DrawingSoftware.BinaryTreeSearch
 {
@@ -15,11 +16,10 @@ namespace DrawingSoftware.BinaryTreeSearch
             return _root;
         }
         // За създване на ноуд ни трябват данни, подаваме данни и ги запзваме на нов ноуд
-        public void Insert(double data)
+        public void Insert(string name, double data)
         {
+            Node newNode = new Node(name, data);
             // Проверяваме дали клона е празен
-            Node newNode = new Node(data);
-            newNode._data = data;
             // ако да новият ноуд става корен
             if (_root == null)
             {
@@ -51,7 +51,7 @@ namespace DrawingSoftware.BinaryTreeSearch
                     // ако данните са по-големи от настоящите 
                     else
                     {
-                        // качваме се ниво нагоре
+                        // слизаме едно ниво надолу
                         current = current._rigthLeaf;
                         if (current == null)
                         {
@@ -64,17 +64,18 @@ namespace DrawingSoftware.BinaryTreeSearch
             }
         }
         
-        public void Inorder(Node root)
+        public void Inorder()
+        {
+            Inorder(ReturnRoot());
+        }
+
+        private void Inorder(Node root)
         {
             if (root != null)
             {
                 Inorder(root._leftLeaf);
-                Console.WriteLine(root._data + "  " );
+                Console.WriteLine(root._data + "  " + root._name);
                 Inorder(root._rigthLeaf);
-            }
-            else
-            {
-                return;
             }
         }
     }
