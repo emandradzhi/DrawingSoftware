@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace DrawingSoftware.BinaryTreeSearch
 {
-    public class BinaryTree<T> where T:IFigure
+    public class BinaryTree<T> where T : IFigure
     {
         private Node<T> _root;
-        
+
         public BinaryTree()
         {
             _root = null;
@@ -35,7 +35,7 @@ namespace DrawingSoftware.BinaryTreeSearch
                     if (newNode._value < current._value)
                     {
                         current = current._leftLeaf;
-                        if(current == null)
+                        if (current == null)
                         {
                             parent._leftLeaf = newNode;
                             return;
@@ -53,26 +53,30 @@ namespace DrawingSoftware.BinaryTreeSearch
                 }
             }
         }
-       
-        
-        public void Search(double area)
+
+
+        public Node<T> Search(double area)
         {
-             Search(_root, area);
+            return Search(_root, area);
         }
 
-        private void Search(Node<T> node,double area)
+        private Node<T> Search(Node<T> node, double area)
         {
-            if (node == null || node._value == area)
+            if (node == null)
             {
-                Console.WriteLine(node._name);
+                return null;
             }
             else if (node._value < area)
             {
-                Search(node._rigthLeaf, area);
+                return Search(node._rigthLeaf, area);
+            }
+            else if (node._value > area)
+            {
+                return Search(node._leftLeaf, area);
             }
             else
             {
-                Search(node._leftLeaf, area);
+                return node;
             }
         }
 

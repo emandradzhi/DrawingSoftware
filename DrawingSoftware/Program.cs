@@ -51,7 +51,7 @@ namespace DrawingSoftware
             Console.WriteLine("=================Inorder=======================");
             btree.Inorder();
             Console.WriteLine("==================Search======================");
-            btree.Search(20);
+            Console.WriteLine(btree.Search(20)); 
             Console.WriteLine("========================================");
             Console.ReadKey(true);
             
