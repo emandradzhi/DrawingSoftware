@@ -53,10 +53,32 @@ namespace DrawingSoftware.BinaryTreeSearch
                 }
             }
         }
+       
         
+        public void Search(double area)
+        {
+             Search(_root, area);
+        }
+
+        private void Search(Node<T> node,double area)
+        {
+            if (node == null || node._value == area)
+            {
+                Console.WriteLine(node._name);
+            }
+            else if (node._value < area)
+            {
+                Search(node._rigthLeaf, area);
+            }
+            else
+            {
+                Search(node._leftLeaf, area);
+            }
+        }
+
         public void Inorder()
         {
-            Inorder(ReturnRoot());
+            Inorder(_root);
         }
 
         private void Inorder(Node<T> root)
