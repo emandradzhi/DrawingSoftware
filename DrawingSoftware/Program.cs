@@ -29,12 +29,12 @@ namespace DrawingSoftware
                 parall.Add(shape1);
             }
 
-            BinaryTree btree = new BinaryTree();
+            BinaryTree<Parallelogram> btree = new BinaryTree<Parallelogram>();
 
             foreach (var item in parall)
             {
                 Console.WriteLine(item.CalculateSurfacAarea().ToString());
-                btree.Insert(item.GetType().Name, item.CalculateSurfacAarea());
+                btree.Insert(item);
             }
 
             Console.WriteLine("========================================");

@@ -1,15 +1,18 @@
-﻿namespace DrawingSoftware.BinaryTreeSearch
+﻿using DrawingSoftware.Interfaces;
+using System;
+
+namespace DrawingSoftware.BinaryTreeSearch
 {
-    public class Node
+    public class Node<T> where T:IFigure
     {
         public string _name;
-        public double _data;
-        public  Node _rigthLeaf;
-        public  Node _leftLeaf;
-        public Node(string name, double data)
+        public double _value;
+        public  Node<T> _rigthLeaf;
+        public  Node<T> _leftLeaf;
+        public Node(T data)
         {
-            this._name = name;
-            this._data = data;
+            this._name = data.ToString();
+            this._value = data.CalculateSurfacAarea();
             _leftLeaf = null;
             _rigthLeaf = null;
         }

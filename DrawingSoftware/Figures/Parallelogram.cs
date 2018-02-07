@@ -20,6 +20,10 @@ namespace DrawingSoftware.Shapes
         {
             Console.WriteLine("A parallelogram has been drawn");
         }
+        public override string ToString()
+        {
+            return "Parallelogram";
+        }
     }
 }
 

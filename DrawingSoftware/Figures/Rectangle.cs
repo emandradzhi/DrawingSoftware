@@ -17,6 +17,10 @@ namespace DrawingSoftware.Figures
         public override void Draw()
         {
             Console.WriteLine("A rectangle has been drawn");
-        }        
+        }
+        public override string ToString()
+        {
+            return "Rectangle";
+        }
     }
 }

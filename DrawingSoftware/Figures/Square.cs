@@ -18,5 +18,9 @@ namespace DrawingSoftware.Figures
         {
             Console.WriteLine("A square has been drawn");
         }
+        public override string ToString()
+        {
+            return "Square";
+        }
     }
 }

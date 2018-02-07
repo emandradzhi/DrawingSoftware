@@ -20,6 +20,10 @@ namespace DrawingSoftware.Figures
         {
             Console.WriteLine("A rhombus has been drawn");
         }
+        public override string ToString()
+        {
+            return "Rhombus";
+        }
     }
 }
 
