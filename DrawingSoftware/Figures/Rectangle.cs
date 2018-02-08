@@ -10,8 +10,8 @@ namespace DrawingSoftware.Figures
         }
         public override double CalculateSurfacAarea()
         {
-            double area = Math.Abs((_A.Y + _B.Y)) * Math.Abs((_B.X + _C.X));
-            return area;
+            double area = Math.Abs((_A.X - _B.X)) * Math.Abs((_B.Y + _C.Y));
+            return Math.Round(area,3);
         }
 
         public override void Draw()

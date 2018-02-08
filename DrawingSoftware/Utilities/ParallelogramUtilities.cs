@@ -27,7 +27,7 @@ namespace DrawingSoftware
         public static double FindLength(Point A, Point B)
         {
             double l = Math.Sqrt(Math.Pow(Math.Abs((A.X - B.X)), 2) + Math.Pow(Math.Abs((A.Y - B.Y)), 2));
-            return l;
+            return Math.Round(l,3);
         }
     }
 }

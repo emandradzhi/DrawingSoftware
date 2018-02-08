@@ -29,13 +29,13 @@ namespace DrawingSoftware.Factories
             {
                 return new Rhombus(A, B, C);
             }
-            else if (AB == CD && AD == BC && d1 == d2)
-            {
-                return new Rectangle(A, B, C);
-            }
             else if (AB == AD && AB == BC && AB == CD && d1 == d2)
             {
                 return new Square(A, B, C);
+            }
+            else if (AB == CD && AD == BC && d1 == d2)
+            {
+                return new Rectangle(A, B, C);
             }
             else
             {

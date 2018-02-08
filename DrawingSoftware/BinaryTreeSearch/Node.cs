@@ -16,5 +16,9 @@ namespace DrawingSoftware.BinaryTreeSearch
             _leftLeaf = null;
             _rigthLeaf = null;
         }
+        public override string ToString()
+        {
+            return this._name;
+        }
     }
 }

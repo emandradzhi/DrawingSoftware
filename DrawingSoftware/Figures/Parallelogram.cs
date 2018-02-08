@@ -11,10 +11,10 @@ namespace DrawingSoftware.Shapes
         }
         public override double CalculateSurfacAarea()
         {
-            double a = (_B.X - _A.X);
-            double h = new Random(50).NextDouble();
+            double a = Math.Abs((_A.X - _B.X));
+            double h = Math.Abs((_B.Y - _C.Y));
             double area = a * h;
-            return area;
+            return Math.Round(area,3);
         }
         public override void Draw()
         {

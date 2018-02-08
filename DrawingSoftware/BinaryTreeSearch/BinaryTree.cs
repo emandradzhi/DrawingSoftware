@@ -5,7 +5,12 @@ using System.Collections.Generic;
 namespace DrawingSoftware.BinaryTreeSearch
 {
     public class BinaryTree<T> where T : IFigure
-    {
+    { 
+
+        // TODO: Find a way to store shapes with eaqual surfice area but 
+        // different shape, and on search i should see every shape with that area
+
+
         private Node<T> _root;
 
         public BinaryTree()
@@ -53,8 +58,6 @@ namespace DrawingSoftware.BinaryTreeSearch
                 }
             }
         }
-
-
         public Node<T> Search(double area)
         {
             return Search(_root, area);
@@ -62,22 +65,24 @@ namespace DrawingSoftware.BinaryTreeSearch
 
         private Node<T> Search(Node<T> node, double area)
         {
+            area = Math.Round(area, 3);
             if (node == null)
             {
                 return null;
+            }
+            else if (node._value == area)
+            {
+                return node;
             }
             else if (node._value < area)
             {
                 return Search(node._rigthLeaf, area);
             }
-            else if (node._value > area)
+            else
             {
                 return Search(node._leftLeaf, area);
             }
-            else
-            {
-                return node;
-            }
+           
         }
 
         public void Inorder()

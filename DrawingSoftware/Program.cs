@@ -41,18 +41,18 @@ namespace DrawingSoftware
 
 
             BinaryTree<Parallelogram> btree = new BinaryTree<Parallelogram>();
-
+            Console.WriteLine("==================Inserted=====================");
             foreach (var item in parall)
             {
-                Console.WriteLine(item.CalculateSurfacAarea().ToString() + "Inserted");
+                Console.WriteLine(item.CalculateSurfacAarea().ToString());
                 btree.Insert(item);
             }
 
             Console.WriteLine("=================Inorder=======================");
             btree.Inorder();
-            Console.WriteLine("==================Search======================");
-            Console.WriteLine(btree.Search(20)); 
-            Console.WriteLine("========================================");
+            Console.WriteLine("==================Search=======================");
+            Console.WriteLine(btree.Search(4)); 
+            Console.WriteLine("===============================================");
             Console.ReadKey(true);
             
         }

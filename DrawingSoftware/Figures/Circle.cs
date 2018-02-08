@@ -14,7 +14,7 @@ namespace DrawingSoftware.Shapes
         public new double CalculateSurfacAarea()
         {
             double area = Math.PI * radius;
-            return area;
+            return Math.Round(area,3);
         }
 
         public new void Draw()
